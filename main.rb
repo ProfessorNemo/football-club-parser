@@ -9,7 +9,7 @@ end
 
 BASE_URL = 'https://www.transfermarkt.com'.freeze
 
-# url = 'https://www.transfermarkt.com/zenit-st-petersburg/startseite/verein/964?saison_id=2021
+# url = https://www.transfermarkt.com/zenit-st-petersburg/startseite/verein/964?saison_id=2021
 
 url = "#{BASE_URL}/premier-liga/tabelle/wettbewerb/RU1?saison_id=2021"
 
