@@ -15,8 +15,9 @@ describe Transfermarkt::Club do
       club.fetch_players!
 
       expect(club.fetch_players.count).to eq 22
-      expect(club.fetch_players[1][:name]).to eq 'Mikhail Kerzhakov'
+      expect(club.fetch_players.first[:name]).to eq 'Stanislav Kritsyuk'
       expect(club.fetch_players.first[:price]).to eq 2_000_000
+      expect(club.fetch_players.first[:date].to_s).to eq "1990-12-01"
     end
   end
 end

@@ -20,7 +20,7 @@ module Transfermarkt
         document = Nokogiri::HTML(fetch_page!)
         document.css('table.items > tbody > tr').map do |tr_node|
           {
-            name: tr_node.at('.hide-for-small').text,
+            name: tr_node.at('.inline-table .hide-for-small').text,
             price: price_to_int(tr_node.at('.rechts.hauptlink').text),
             date: Date.parse(tr_node.css('.zentriert')[1].text)
           }
